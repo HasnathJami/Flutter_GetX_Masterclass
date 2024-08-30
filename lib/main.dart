@@ -20,11 +20,11 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: HomeScreen(),
-      getPages: [
-        GetPage(name:'/', page: () => HomeScreen()),
-        GetPage(name:'/screenOne', page: () => ScreenOne()),
-        GetPage(name:'/screenTwo', page: () {return ScreenTwo();}),
-      ],
+      // getPages: [
+      //   GetPage(name:'/', page: () => HomeScreen()),
+      //   GetPage(name:'/screenOne', page: () => ScreenOne()),
+      //   GetPage(name:'/screenTwo', page: () {return ScreenTwo();}),
+      // ],
     );
   }
 }

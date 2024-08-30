@@ -12,105 +12,34 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('GetX Masterclass'),
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          // Card(
-          //   child: ListTile(
-          //     title: Text('GetX Dialog Alert'),
-          //     subtitle: Text('Getx dialog alert with getX'),
-          //     onTap: (){
-          //       Get.defaultDialog(
-          //         title: "Delete chat",
-          //         titlePadding: EdgeInsets.only(top: 20),
-          //         // middleText: 'Are you sure you want to delete?',
-          //           content: Column(
-          //             children: [
-          //               Text('Are you sure you want to delete?'),
-          //               Text('Please let us know')
-          //             ],
-          //           ),
-          //         contentPadding: EdgeInsets.all(20),
-          //         // textConfirm: 'Yes',
-          //         // textCancel: 'No',
-          //         confirm: TextButton(
-          //           onPressed: () {
-          //           },
-          //           child: Text('Ok'),
-          //         ),
-          //         cancel: TextButton(
-          //           onPressed: (){
-          //             // Navigator.pop(context);
-          //              Get.back();
-          //           },
-          //           child: Text("Cancel"),
-          //         ),
-          //         barrierDismissible: false
-          //       );
-          //     },
-          //   ),
-          // ),
-          // Card(
-          //   child: ListTile(
-          //     title: Text('GetX Bottom Sheet Dialog'),
-          //     subtitle: Text('Getx bottom sheet dialog with getX'),
-          //     onTap: (){
-          //       Get.bottomSheet(
-          //         Container(
-          //           decoration: BoxDecoration(
-          //             color: Colors.blue,
-          //             borderRadius: BorderRadius.circular(30)
-          //           ),
-          //           child: Column(
-          //             children: [
-          //               ListTile(
-          //                 leading: Icon(Icons.light_mode),
-          //                 title: Text('Light Theme'),
-          //                 onTap: (){
-          //                   Get.changeTheme(ThemeData.light());
-          //                   Get.back();
-          //                 },
-          //               ),
-          //               ListTile(
-          //                 leading: Icon(Icons.dark_mode),
-          //                 title: Text('Dark Theme'),
-          //                 onTap: (){
-          //                   Get.changeTheme(ThemeData.dark());
-          //                   Get.back();
-          //                 },
-          //               ),
-          //             ],
-          //           ),
-          //         )
-          //       );
-          //     },
-          //   ),
-          // ),
-          Center(
-              child: TextButton(
-                  onPressed: () {
-                    // Navigator.push(context, MaterialPageRoute(builder: (context) => ScreenOne()));
-                    // Get.to(ScreenOne(name: "Jami",));
-                    Get.toNamed('/screenOne', arguments: ["Hasnath", "Jami"]);
-                  },
-                  child: Text("Go to next page"))),
-        ],
-      ),
-      floatingActionButton: FloatingActionButton(onPressed: () {
-        Get.snackbar(
-          "Message",
-          "Welcome to GetX Masterclass",
-          backgroundColor: Colors.blue,
-          snackPosition: SnackPosition.BOTTOM,
-          icon: Icon(Icons.notifications),
-          mainButton: TextButton(onPressed: () {}, child: Text('click')),
-          // onTap: (snap){}
-        );
-      }),
-    );
+        appBar: AppBar(
+          title: Text('GetX Masterclass'),
+        ),
+        body: Column(
+          children: [
+            Container(
+              // height: MediaQuery.of(context).size.height * 0.3,
+              height:Get.height * 0.3,
+              width: Get.width * 0.2,
+              color: Colors.red,
+              child: Center(
+                child: Text(
+                    'Hello'
+                ),
+              ),
+            ),
+            Container(
+              // height: MediaQuery.of(context).size.height * 0.3,
+              height:Get.height * 0.2,
+              width: Get.width * 0.2,
+              color: Colors.green,
+              child: Center(
+                child: Text(
+                    'Hi'
+                ),
+              ),
+            ),
+          ],
+        ));
   }
 }
