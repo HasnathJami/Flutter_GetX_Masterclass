@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getx_masterclass/home_screen.dart';
+import 'package:flutter_getx_masterclass/screen_one.dart';
+import 'package:flutter_getx_masterclass/screen_two.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -18,6 +20,11 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: HomeScreen(),
+      getPages: [
+        GetPage(name:'/', page: () => HomeScreen()),
+        GetPage(name:'/screenOne', page: () => ScreenOne()),
+        GetPage(name:'/screenTwo', page: () {return ScreenTwo();}),
+      ],
     );
   }
 }
