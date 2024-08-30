@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getx_masterclass/opacity/opacity_screen.dart';
+import 'package:flutter_getx_masterclass/switch/switch_screen.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: OpacityScreen(),
+      home: SwitchScreen(),
       // getPages: [
       //   GetPage(name:'/', page: () => HomeScreen()),
       //   GetPage(name:'/screenOne', page: () => ScreenOne()),
