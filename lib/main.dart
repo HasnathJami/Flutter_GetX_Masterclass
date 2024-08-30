@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_getx_masterclass/favorite/favorite_screen.dart';
+import 'package:flutter_getx_masterclass/image_picker/image_picker_screen.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: FavoriteScreen(),
+      home: ImagePickerScreen(),
       // getPages: [
       //   GetPage(name:'/', page: () => HomeScreen()),
       //   GetPage(name:'/screenOne', page: () => ScreenOne()),
