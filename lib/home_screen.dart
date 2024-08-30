@@ -16,29 +16,33 @@ class _HomeScreenState extends State<HomeScreen> {
           title: Text('GetX Masterclass'),
         ),
         body: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+           // crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
-              // height: MediaQuery.of(context).size.height * 0.3,
-              height:Get.height * 0.3,
-              width: Get.width * 0.2,
-              color: Colors.red,
-              child: Center(
-                child: Text(
-                    'Hello'
-                ),
-              ),
+            ListTile(
+              title: Text('message'.tr),
+              subtitle: Text('name'.tr),
             ),
-            Container(
-              // height: MediaQuery.of(context).size.height * 0.3,
-              height:Get.height * 0.2,
-              width: Get.width * 0.2,
-              color: Colors.green,
-              child: Center(
-                child: Text(
-                    'Hi'
-                ),
-              ),
+            SizedBox(
+              height: 50,
             ),
+            Row(
+              children: [
+                OutlinedButton(
+                    onPressed: () {
+                      Get.updateLocale(Locale('en', 'US'));
+                    },
+                    child: Text('English')),
+                SizedBox(
+                  width: 20,
+                ),
+                OutlinedButton(
+                    onPressed: () {
+                      Get.updateLocale(Locale('bn', 'BD'));
+                    },
+                    child: Text('Bangla'))
+              ],
+            )
           ],
         ));
   }

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getx_masterclass/home_screen.dart';
-import 'package:flutter_getx_masterclass/screen_one.dart';
-import 'package:flutter_getx_masterclass/screen_two.dart';
+import 'package:flutter_getx_masterclass/languages.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -15,6 +14,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Flutter Demo',
+      // locale: Locale('bn', 'BD'),
+      translations: Languages(),
+      locale: Locale('en', 'US'),
+      fallbackLocale: Locale('en', 'US'),
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
